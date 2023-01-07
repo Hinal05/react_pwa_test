@@ -26,10 +26,6 @@ export default function Home() {
                 let infoBar = document.querySelector('#custom-info-bar');
                 infoBar.style.display = 'none'; // Hide info bar
                 deferredPrompt = null; // not need anymore
-                alert('Accepted Install prompt.');
-              }
-              if (choiceResult.outcome === 'dismissed') {
-                alert('Dismissed Install prompt.');
               }
             });
           });
