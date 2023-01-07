@@ -74,7 +74,6 @@ export default function Home() {
         <div className='sticky-modal'>Install the app on your iPhone: tap <span style={{width: "16px", display: "inline-block"}}><img src={iconIOS} width="100%" alt="" /></span> and then Add to homescreen.</div>
       ) : (
         <>
-        <div className='sticky-modal'>Install the app on your iPhone: tap <span style={{width: "16px", display: "inline-block"}}><img src={iconIOS} width="100%" alt="" /></span> and then Add to homescreen.</div>
         <div id='custom-info-bar'>
           <Button variant="dark" id='custom-install-button'>Install</Button>
         </div>
