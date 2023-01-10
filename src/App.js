@@ -6,7 +6,8 @@ import Home from './Home';
 import About from './About';
 import Users from './Users';
 
-function App() {
+const App = () => {
+
   return (
     <div className="App">
       <Router>

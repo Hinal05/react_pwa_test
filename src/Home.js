@@ -50,6 +50,7 @@ export default function Home() {
     if (isIosDevice() && isSafari()) {
       setIsIOS(true);
     }
+
   }, [setIsIOS, isIOS]);
 
 

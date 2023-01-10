@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Table} from 'react-bootstrap';
 
-export default function Users() {
+const Users = (idb) => {
   const [data, setData] = useState([]);
   const [mode, setMode] = useState('online');
   useEffect(() => {
@@ -19,6 +19,7 @@ export default function Users() {
       // alert('Cache block.');
     })
   }, [])
+
   return (
     <div>
       <div>
@@ -53,3 +54,5 @@ export default function Users() {
     </div>
   )
 }
+
+export default Users;
