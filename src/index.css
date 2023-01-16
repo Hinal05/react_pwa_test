@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.only-mbl{
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .only-mbl{
+    display: block;
+  }
+}

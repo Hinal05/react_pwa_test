@@ -4,9 +4,9 @@ this.addEventListener("install", (event) => {
   event.waitUntil (
     caches.open(cacheData).then((cache) => {
       cache.addAll([
-        "/static/js/bundle.js",
-        "/index.html",
         "/",
+        "/index.html",
+        "/static/js/bundle.js",
         "/users",
         "/about"
       ])
@@ -21,8 +21,6 @@ this.addEventListener("fetch", (event) => {
         if(cachedResponse) {
           return cachedResponse;
         }
-        // let requestUrl = event.request.clone();
-        // return fetch(requestUrl);
 
         const fetchedResponse = fetch(event.request).then((networkResponse) => {
           cache.put(event.request, networkResponse.clone());
@@ -33,22 +31,9 @@ this.addEventListener("fetch", (event) => {
         return cachedResponse || fetchedResponse;
       });
     }));
-    // event.respondWith(
-    //   caches.match(event.request).then((resp) => {
-    //     if(resp) {
-    //       return resp;
-    //     }
-    //     let requestUrl = event.request.clone();
-    //     return fetch(requestUrl);
-    //   })
-    // )
   }
 })
 
 this.addEventListener("activate", (event) => {
   console.log('service worker has been activated.');
 })
-
-// if (window.indexedDB) {
-//   console.log("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
-// }

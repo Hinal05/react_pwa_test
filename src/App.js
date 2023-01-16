@@ -5,9 +5,9 @@ import {Link, Route, BrowserRouter as Router, Routes, NavLink} from 'react-route
 import Home from './Home';
 import About from './About';
 import Users from './Users';
+import Cookie from './cookie';
 
 const App = () => {
-
   return (
     <div className="App">
       <Router>
@@ -18,12 +18,14 @@ const App = () => {
               <NavLink className="nav-link" to="/">Home</NavLink>
               <NavLink className="nav-link" to="/about">About</NavLink>
               <NavLink className="nav-link" to="/users">Users</NavLink>
+              <NavLink className="nav-link" to="/cookie">Cookie</NavLink>
             </Nav>
           </Container>
         </Navbar>
         <Routes>
           <Route element={<About />} path="/about"></Route>
           <Route element={<Users />} path="/users"></Route>
+          <Route element={<Cookie />} path="/cookie"></Route>
           <Route element={<Home />} path="/"></Route>
         </Routes>
       </Router>
